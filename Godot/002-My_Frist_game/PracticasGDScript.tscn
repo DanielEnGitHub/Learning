@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+#	TRABAJANDO CON BUTTON
+
+func _ready():
+	var b = Button.new()
+	b.text = \"Soy un boton\"
+	add_child(b)
+"
+
+[node name="PracticasGDScript" type="Node2D"]
+script = SubResource( 1 )
