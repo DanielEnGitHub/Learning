@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+#	----Imprimr en pantalla consola Hola mundo----
+#	print(\"Hola mundo\")
+
+#	----Suma dos numeros y muestra resultado en consola----
+#	var x = 10
+#	var y = 20
+#	print(\"La suma de: \",x, \"+\",y,\"=\", (x+y))
+
+#	----Crea un for que imprima del 1 al 9----
+#	for x in range (1,10):
+#		print(x)
+#	pass
+	
+	
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[node name="PracticasGDScript" type="Node2D"]
+script = SubResource( 1 )
