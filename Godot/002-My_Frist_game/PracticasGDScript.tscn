@@ -2,20 +2,12 @@
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
-#	TRABAJANDO CON LABELS
+#	TRABAJANDO CON BUTTON
 
 func _ready():
-#	var l = Label.new() # Label.new(): crea un label en escena
-#	l.text = \"Hola mundo\" # Agrega algun valor al label creado anteriormente
-#	add_child(l) # Intancia el label a la escena, label ahora es hijo de Node2D
-	
-#	----Sumar 2 numero e imprimir su resultado en pantalla---
-	var num1 = 20
-	var num2 = 35
-	
-	var res = Label.new()
-	res.text = \"La suma es: \" + str(num1 + num2)
-	self.add_child(res) # Self hace referencia a la clase principal NODE2D, esto quiere decir que res sera hijo de Node2D
+	var b = Button.new()
+	b.text = \"Soy un boton\"
+	add_child(b)
 "
 
 [node name="PracticasGDScript" type="Node2D"]
