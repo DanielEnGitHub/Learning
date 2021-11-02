@@ -1,0 +1,33 @@
+/*Utilizar tipo de funete personalizado*/
+/* @font-face {
+    font-family: ;
+    src: url();
+} */
+
+.propiedades{
+    /* font-family: monospace; Etilo de texto */
+    text-align: justify; /*Alineacion de texto*/
+    /* text-indent: 100px; Identar el texto */
+    text-decoration: line-through;  /*Decora el texto*/
+    text-transform: uppercase; /*Convierte el texto*/
+    /* letter-spacing: 5px; Crea espacio entre letras*/
+    /* word-spacing: 2px; Crea espacio entre palabras */
+}
+
+h1, .shadow{
+  text-shadow: 2px 2px 3px grey;  /*Derecha abajo desenfoque color*/
+} 
+
+/*PREFIJOS DE LOS NAVEGADORES*/
+
+/*
+-moz-: Para navegadores basados en Gecko como Mozilla.
+
+-webkit-: Para navegadores basados en Webkit, como Chrome o Safari.
+
+-o-: Para Opera.
+
+-ms-: Para Internet Explorer y Edger
+
+colocar los prefijos primero
+*/
