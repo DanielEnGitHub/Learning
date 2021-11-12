@@ -1,0 +1,63 @@
+/* *TRANSFORMATION */
+.cuadro{
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    margin: 50px;
+
+    /* Transicion solo para color de fondo (all para todo)*/
+    transition: background-color 1s ease;
+
+    /* Se tardara 2 segundos despues para quitar la transicion */
+    /* transition-delay: 1s; */
+
+    /* nombre de la propiedad | duración | función | retardo */
+    /* transition: margin-left 4s ease-in-out 1s; */
+}
+
+/* PSEUDOCLASES */
+.cuadro:hover{
+    /* Crea un lapso de tiempo en pasar de una animacion a otra */
+    transition: 1s;
+    background-color: aqua;
+}
+
+/* *ANIMATION */
+@keyframes entrar-salir{
+    /*-- ANIMACION INICIA-FINAL */
+    /* COLOR INICIA */
+    /* from{background-color: beige;}
+
+    /* COLOR FINALIZA */
+    /* to{background: burlywood;} */
+
+    /*-- ANIMACINO POR PORSENTAJE */
+    0%{background-color: azure;}
+    25%{background-color: antiquewhite;}
+    50%{background-color: bisque;}
+    75%{background-color: burlywood;}
+    100%{background-color: azure;}
+
+}
+.cuadro1{
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    margin: 50px;
+
+    /* LLAMAR A LA ANIMACION */
+    animation-name: entrar-salir;
+
+    /* DURACION DE LA ANIMACION */
+    animation-duration: 1.5s;
+
+    /* DELAY PARA COMENZAR LA ANIMACION */
+    /* animation-delay: 2s; */
+
+    /* ANIMACION INFINITA */
+    animation-iteration-count: infinite;
+
+    /* REUSMIDO */
+    /* animation: entrar-salir 1.5s ease infinite; */
+
+}
