@@ -45,7 +45,7 @@ header{
 }
 
 .menu a:hover{
-    color: #a4281f;
+    color: #181D31;
 }
 
 /* FIN CABECERA */
@@ -99,10 +99,13 @@ header{
     max-width: 120px;
     margin-top: 20px;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
 }
 
 .llamada-accion a:hover{
-    color: #a4281f;
+    transition: all 0.2s ease-in-out;
+    background-color: #181D31;
+    color: white;
 }
 /* FIN SECCION PRINCIPAL */
 
@@ -181,6 +184,21 @@ header{
     font-size: 15px;
     color: #678983;
 }
+
+@media all and (min-width:769px){
+    .nosotros > .contenedor{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .foto-equipo{
+        margin-right: 30px;
+    }
+    .conocenos{
+        padding-left: 30px;
+    }
+
+}
+
 /* FIN SECCION SOBRE NOSOTROS */
 
 /* FOOTEER */
