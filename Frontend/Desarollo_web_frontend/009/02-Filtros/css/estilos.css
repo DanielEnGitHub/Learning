@@ -1,0 +1,45 @@
+/*
+FILTROS:
+
+blur(); Para desenfocar px
+grayscale(); Para escala de grises %
+drop-shadow(); Para sombras px
+sepia(); Para efecto sepia %
+brightness(); Para ajustar brillo %
+contrast(); Para ajustar contraste %
+hue-rotate(); Incrementa el valor de los colores cambiándolos completamente %
+invert(); Invierte la imagen %
+saturate(); Ajustar saturación %
+opacity(); Ajustar opacidad 0.5/%
+
+*/
+
+img{
+    width: 200px;
+    margin: 30px;
+}
+
+.imagen1{
+    filter: blur(1.5px);
+    /* filter:opacity(50%); */
+  }
+  
+  /*.imagen1{
+    opacity: 0.5;
+  }*/
+  
+  .imagen2{
+    filter:grayscale(100%);
+  }
+  
+  .imagen3{
+    filter:sepia(100%);
+  }
+  
+  .imagen4{
+    filter:brightness(120%);
+  }
+  
+  .imagen5{
+    filter:invert(80%);
+  }

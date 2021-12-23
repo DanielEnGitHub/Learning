@@ -1,0 +1,7 @@
+h3{
+    color: coral !important;  /*Important no sirve para especificarle que ese atributo se va a utilizar no importando si en algun otro lugar lo cambiemos nuevamente*/
+}
+
+#p3{
+    font-size: 40px;
+}
