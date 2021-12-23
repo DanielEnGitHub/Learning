@@ -1,0 +1,80 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores elementales
+            Selector Universal = *
+            Selector de tipo o etiqueta = Nombre de la etiqueta
+        Selectores de atributos
+            id = id del elemento
+            clase = clase del elemento
+            otros aributos.
+                [atributo]
+                [atributo=valor] Busca un atributo con el valor indicado
+                [atributo^=valor] Busca un atributo que empieze con el valor indicado
+                [atributo*=valor] Busca un atributo que contenga el valor indicado
+                [atributo$=valor] Busca un atributo que termine con el valor indidcado
+                [atributo|=valor] Se utiliza para cambiar el valor a un atributo que este en otro idioma (en-US, es-MX, es-GT) toma el primer valor y a partir del - el resto lo toma por defecto
+
+    Selectores Compuestos
+        Selectores Agrupados
+        Selectores Combinados
+        Pseudoclases - Pseudoelementos
+*/
+        /* * Selector elementales */
+            /* * Selector Universal = * */
+
+            /* {
+                background-color: ghostwhite;
+            } */
+
+            /* Selector de tipo o etiqueta = Nombre de la etiqueta */
+            /* h1{
+                background-color: blue;
+            }
+
+            p{
+                background-color: aquamarine;
+            } */
+
+        /* * Selector de atributos */
+            /* * id = id del elemento (son sensibles a minsuculas y mayusculas) */
+            /* #tittle{
+                background-color: aquamarine;
+            } */
+
+            /* * clase = clase del elemento (son sensibles a minsuculas y mayusculas) */
+            .tittle{
+                background-color: salmon;
+            }
+            
+            /* * otros aributos. */
+            /* [atributo] */
+            [href]{
+                background-color: cadetblue;
+            }
+
+            /* [atributo=valor] Busca un atributo con el valor indicado */
+            [href = 'www.google.com']{
+                background-color: chartreuse;
+            }
+
+            /* [atributo^=valor] Busca un atributo que empieze con el valor indicado */
+            [href ^= 'color']{
+                background-color: darkorange;
+            }
+
+            /* [atributo*=valor] Busca un atributo que contenga el valor indicado */
+            [href *= 'modo']{
+                background-color: green;
+            }
+
+            /* [atributo$=valor] Busca un atributo que termine con el valor indidcado */
+            [href $= 'rojo']{
+                background-color: red;
+            }
+
+            /* [atributo|=valor] Se utiliza para cambiar el valor a un atributo que este en otro idioma (en-US, es-MX, es-GT) toma el primer valor y a partir del - el resto lo toma por defecto */
+            [lang |= 'en']{
+                background-color: darkturquoise;
+            }
