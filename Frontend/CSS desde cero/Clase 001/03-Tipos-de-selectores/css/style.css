@@ -15,11 +15,6 @@
                 [atributo*=valor] Busca un atributo que contenga el valor indicado
                 [atributo$=valor] Busca un atributo que termine con el valor indidcado
                 [atributo|=valor] Se utiliza para cambiar el valor a un atributo que este en otro idioma (en-US, es-MX, es-GT) toma el primer valor y a partir del - el resto lo toma por defecto
-
-    Selectores Compuestos
-        Selectores Agrupados
-        Selectores Combinados
-        Pseudoclases - Pseudoelementos
 */
         /* * Selector elementales */
             /* * Selector Universal = * */

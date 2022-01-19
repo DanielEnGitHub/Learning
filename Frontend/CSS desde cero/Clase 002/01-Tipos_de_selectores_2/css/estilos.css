@@ -1,0 +1,46 @@
+/* SELECTORES
+    Selectores Compuestos
+        ?Selectores Agrupados
+        *Selectores Combinados
+            *Selector Descendiente
+            !Selector de hermano siguiente
+            !Selector de hermanos siguientes
+            ^Selector de hijo directo > -> Selecciona solo los hijos directos
+        Pseudoclases - Pseudoelementos
+*/
+
+
+/* ?Selectores Agrupados */
+/* .text,
+.text-2,
+.text-3,
+.text-4{
+    background-color: burlywood;
+} */
+
+
+/* *Selectores Combinados */
+/* *Selector descendiente */
+/* div h2{
+    background-color: blueviolet;
+} */
+
+/* !Selector de hermano siguiente: Solo se puede seleccionar el hermano siguiente */
+/* .text-2 + h2{
+    background-color: crimson;
+} */
+/* !Selector de hermanos siguientes */
+/* .text-2 ~ p [class ^= 'text']{ */
+    /* background-color: chartreuse; */
+/* } */
+
+/* ^Selector de hijo directo > -> Selecciona solo los hijos directos */
+/* Selecciona todos los p que esten dentro de container */
+.container p{
+    background-color: aquamarine;
+}
+
+/* Selecciona unicamente hijos directos de la clase container */
+.container > p{
+    background-color: antiquewhite;
+}

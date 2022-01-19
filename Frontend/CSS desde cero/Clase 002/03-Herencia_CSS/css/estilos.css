@@ -1,0 +1,22 @@
+.tittle{
+    color: cyan;
+    font-size: 30px;
+
+    /* span esta herenando ciertos atributos aunque no sea una clase tittle */
+}
+
+/* HEREDAR COLOR */
+.text{
+    color: red;
+}
+.link{
+    color: inherit; /* Toma el color de su elemento padre (Forza la herencia) */
+}
+
+/* DESHEREDAR COLOR */
+.list{
+    color: brown;
+}
+.list-item-extra{
+    color: initial;
+}
