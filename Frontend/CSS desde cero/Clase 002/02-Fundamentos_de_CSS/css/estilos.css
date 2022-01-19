@@ -1,0 +1,39 @@
+/*  ¿Como funciona CSS?
+    Especifidad -> Establece cómo de específico es un selector para saber que estilo aplicar. 
+        Etiquetas y pseudoelementos       001
+        Clases, atributos y pseudoclases  010
+        IDS                               100
+        Estilos en línea                  1000
+        important                         Gana a todo
+    El cálculo se realiza con la siguiente formula:
+    Cascada
+    Herencia
+
+*/
+
+/* Prioriza este elemento por tener mas nivel en especifidad */
+h1.tittle#tittle{
+    background-color: crimson;
+}
+
+h1{
+    background-color: antiquewhite;
+}
+
+.tittle{
+    background-color: aqua;
+}
+
+#tittle{
+    background-color: azure;
+}
+
+h1.tittle{
+    background-color: beige;
+}
+
+h1#tittle{
+    background-color: bisque;
+}
+
+/* BUENAS PRACTICAS, UTILIZAR SIEMPRE CLASES */
