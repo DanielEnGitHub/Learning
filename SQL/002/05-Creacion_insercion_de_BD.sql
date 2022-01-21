@@ -36,6 +36,18 @@ CREATE TABLE Producto(
 	Stock INT
 );
 
+/*CLASE*/
+CREATE TABLE Clase(
+	ClaseID INT PRIMARY KEY IDENTITY(1,1),
+	Nombre VARCHAR(100),
+	FechaApertura DATE,
+	HoraClase VARCHAR(10),
+	precio MONEY,
+	id_maestro INT,
+	id_alumno INT,
+	CONSTRAINT fk_maestro FOREIGN KEY (id_maestro) REFERENCES Maestro (MaestroID), --LLAVE FORANEA
+	CONSTRAINT fk_alumno FOREIGN KEY (id_alumno) REFERENCES Alumno (AlumnoID), --LLAVE FORANEA
+);
 
 /* AGREGAR COLUMNAS */
 ALTER TABLE Alumno ADD Direccion VARCHAR(500);
@@ -65,12 +77,25 @@ VALUES('Mouse Loghitech', 450, 500, 15),
 	  ('Ryzen 3 3400G', 800, 1200, 5),
 	  ('Ryzen 5 3400G', 1500, 2000, 4)
 ;
+/*CLASE*/
+INSERT INTO Clase (Nombre,FechaApertura,HoraClase,precio,id_maestro,id_alumno)
+VALUES('Introduccion a la programacion', '10-02-2022', '11am', 30, 1, 2) ;
+
+INSERT INTO Clase (Nombre,FechaApertura,HoraClase,precio,id_maestro,id_alumno)
+VALUES('Reparacion de computadoras', '10-02-2022', '10am', 30, 2, 1);
+
+INSERT INTO Clase (Nombre,FechaApertura,HoraClase,precio,id_maestro,id_alumno)
+VALUES('Logica de programacion', '10-02-2022', '12pm', 30, 3, 1);
+
+INSERT INTO Clase (Nombre,FechaApertura,HoraClase,precio,id_maestro,id_alumno)
+VALUES('Introduccion al desarollo WEB', '10-02-2022', '2pm', 30, 4, 2);
 
 
 /* MOSTRAR TABLAS */
 SELECT * FROM Maestro m ;
 SELECT * FROM Alumno a ;
 SELECT * FROM Producto p ;
+SELECT * FROM Clase c ;
 
 
 /* ACTUALIZAR/EDITAR DATOS*/
