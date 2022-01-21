@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo con Formularios con JavaScript</title>
+</head>
+<body>
+    <br><br><br><br>
+    <center>
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="César"> <br>
+        Apellido: <input type="text" name="apellido" value="Perén"> <br>
+    </form>
+
+    <!-- Ejecuta una funcino al darle click al boton creado -->
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="valores"></div>
+    </center>
+
+
+
+    <script>
+        function mostrarValores(){
+            let formulario = document.forms['formulario'];
+            let texto = '';
+            for (let elemento of formulario){
+                texto += elemento.value + ' ';
+            }
+            // Accediendo al los elementos del formulario individualmente
+            let nombre = formulario['nombre'];
+            let apellido = formulario['apellido'];
+
+            console.log(nombre.value);
+            console.log(apellido.value);
+
+            // Agregando los elementos de texto al div valores
+            document.getElementById('valores').innerHTML = texto;
+        }
+        
+    </script>
+</body>
+</html>

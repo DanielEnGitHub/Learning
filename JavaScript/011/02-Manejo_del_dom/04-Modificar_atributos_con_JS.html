@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar atributos</title>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    <img id="image" src="http://www.smashbros.com/images/og/yoshi.jpg" alt="yoshi" width="400px">
+    <button onclick="changeIMG()">Cambiar imagen</button>
+
+    <script>
+        function changeIMG(){
+            document.getElementById('image').src = 'https://www.cope.es/blogs/gamelover/wp-content/uploads/sites/13/2018/04/SuperMario.png'
+        }
+    </script>
+</body>
+</html>
