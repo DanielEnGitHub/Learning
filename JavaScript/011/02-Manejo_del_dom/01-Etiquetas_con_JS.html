@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del DOM con JS</title>
+    <style>
+        .azul{
+            color: slateblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Acceder al objeto por medio de id -->
+    <h1 class="azul" id="tittle">Ejemplo de DOM con JS</h1>
+    <p class="azul" id="text">Hola mundo</p>
+    <p class="azul" id="text1">Parrafo 2</p>
+
+
+
+
+
+    <script>
+        // <!-- *Acceder por medio del ID -->
+        let tittle = document.getElementById('tittle'); //innerHTML: recupera el texto que contiene la etiqueta
+        console.log(`Elemento titulo: ${tittle.innerHTML}` );
+
+        let text = document.getElementById('text');
+        console.log(`Elemento text: ${text.innerHTML}`);
+
+        // *Se modifico el texto de la etiqueta <p>
+        text.innerHTML = 'Hola mundo desde JS'
+
+        // <!-- *Acceder por medio de la ETIQUETA -->
+        // Busca todas la etiquetas que sean de tipo <p>
+        let parrafos = document.getElementsByTagName('p');
+        console.log(`No. parrafos: ${parrafos.length}`);
+
+        for (let x = 0; x < parrafos.length; x++) {
+            console.log(parrafos[x].innerHTML);
+        }
+
+        // <!-- *Acceder por medio de la CLASE -->
+        let clase = document.getElementsByClassName('azul');
+
+        console.log(`No. elementos color azul: ${clase.length}`);
+
+        for (let x = 0; x < clase.length; x++) {
+            console.log(clase[x].innerHTML);
+        }
+
+        // <!-- *Acceder por medio de ETIQUETA.CLASE -->
+        let elementos = document.querySelectorAll('p.azul');
+
+        console.log(`No. de parrafos de color azul: ${elementos.length}`);
+
+        for (let x = 0; x < elementos.length; x++) {
+            console.log(elementos[x].innerHTML);
+        }
+    </script>
+</body>
+</html>
