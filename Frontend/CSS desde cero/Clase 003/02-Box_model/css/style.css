@@ -1,0 +1,72 @@
+body{
+    background-color: #333;
+    color: #fff;
+}
+
+/* ^Width & Height */
+.block{
+    background-color: bisque;
+    color: black;
+    width: 200px; /* Aumenta el ancho del elemenento */
+    height: 200px; /* Aumenta el alto del elemento */
+}
+
+/* Los elemento INLINE no aumentan su alto o tamaño */
+.inline{
+    background-color: burlywood;
+    color: black;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* ^Margin */
+/* Es la propiedad que nos permite generar espacions entre elementos.
+   Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar márgenes
+
+   Admite 4 valores que van en el orden de las agujas del relos
+   4 valores: margin: top right bottom left;
+   3 valores: margin: top rightbottom left;
+   2 valores: margin: top/bottom right/left;
+   1 valores: margin: top/right/bottom/left;
+*/
+
+.block{
+    margin: 100px;
+}
+
+/* Los elementos INLINE solo tienen margenes HORIZONTALES */
+.inline{
+    margin-right: 100px;
+}
+
+.tittle{
+    margin-left: auto; /* El elemento se mueve hacia la izquierda*/
+    background-color: burlywood;
+    width: 100px;
+}
+
+
+/* ^Padding */
+/* Es la propiedad que nos permite generar espacio interno entre el borde y la caja
+   Es un shorthand (propiedad abreviada) que controla los 4 lados posibles a los que dar padding
+
+   Admite 4 valores que van en el orden de las agujas del relos
+   4 valores: margin: top right bottom left;
+   3 valores: margin: top rightbottom left;
+   2 valores: margin: top/bottom right/left;
+   1 valores: margin: top/right/bottom/left;
+ */
+.block{
+    padding: 10px;
+}
+
+/* Padding si aplica a los elementos INLINE */
+.inline{
+    padding: 150px;
+}
+/* !MALAS PRACTICAS */
+/* all{
+    padding: 0;
+    margin: 0;
+} */
