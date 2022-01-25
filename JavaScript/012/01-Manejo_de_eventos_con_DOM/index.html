@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de evento en el DOM</title>
+</head>
+<!-- *ONLOAD -->
+<body onload="start()">
+    <div id='mostrar'></div>
+    <script>
+        function start(){
+            alert('Pagina cargada correctamente');
+            let texto = '';
+            if(navigator.cookieEnabled){
+                texto = 'Cookies están habilitadas';
+            }
+            else{
+                texto = 'Cookies están inhabilitadas';
+            }
+            document.getElementById('mostrar').innerHTML = texto;
+        }
+    </script>
+
+    <!-- *ONCLICK -->
+    <!-- <h1 onclick="this.innerHTML='Forma 1 de realizar eventos JS'">Hola mundo</h1> -->
+    <!-- <h1 onclick="cambiar(this)">Hola mundo</h1> -->
+    <h1 id="tittle"">Hola mundo</h1>
+
+    <!-- <button onclick="cambiar()">Cambiar texto</button> -->
+
+    <script>
+        // function cambiar(tittle){
+        //     tittle.innerHTML = "Forma 2 de realizar eventos JS";
+        // }
+
+        document.getElementById('tittle').onclick = cambiarTexto;
+        function cambiarTexto(){
+            document.getElementById('tittle').innerHTML = "Forma 3 de realizar eventos JS"
+        }
+    </script>
+
+    <!-- *ONCHANGE -->
+    Nombre: <input type="text" onchange="convertir(this)"/>
+    <script>
+        function convertir(nombreInput){
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
+    </script>
+
+
+
+    <!-- *ONMOUSEOVER/ONMOUSEOUT -->
+    <h1 onmouseover="rojo(this)" onmouseout="azul(this)">
+        Evento mouse encima del texto y viceversa
+    </h1>
+    <br/>
+    <script>
+        function rojo(titulo){
+            titulo.innerHTML = 'Mouse sobre el texto';
+        }
+        function azul(titulo){
+            titulo.innerHTML = 'Mouse fuera del texto';
+        }
+    </script>
+
+
+    <!-- *ONMOUSEDOWN/ONMOUSESEUP -->
+    <h1 onmousedown="rojo(this)" onmouseup="azul(this)"
+    onclick="verde(this)">
+        Click en el texto o viceversa
+    </h1>
+    <br/>
+    <script>
+        function rojo(titulo){
+            console.log('onmousedown cambio a rojo');
+            titulo.style.color = 'red';
+        }
+        function azul(titulo){
+            console.log('onmouseup cambio a azul');
+            titulo.style.color = 'blue';
+        }
+        function verde(titulo){
+            console.log('click cambio a verde');
+            titulo.style.color = 'green';
+        }
+    </script>
+
+
+    <!-- *ONFOCUS/ONBLUR -->
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <br/><br/>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <script>
+        function cambiar(elementoInput){
+            elementoInput.style.background = 'yellow';
+        }
+        function regresar(elementoInput){
+            elementoInput.style.background = 'white';
+        }
+    </script>
+
+
+    <!-- *ADDEVENTLISTENER -->
+    <br>
+    <h1>Event AddEventListener</h1>
+    Nombre: <input type="text" id='nombre'/>
+    <br/><br/>
+    Apellido: <input type="text" id='apellido'/>
+    <script>
+        document.getElementById('nombre').addEventListener('focus', cambiar);
+        document.getElementById('nombre').addEventListener('blur', regresar);
+
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+
+        function cambiar(evento){
+            let componente = evento.target;
+            componente.style.background = 'yellow';
+        }
+        function regresar(evento){
+            evento.target.style.background = 'white';
+        }
+    </script>
+
+
+    <!-- *DELEGACION DE EVENTOS -->
+    <form id='forma'>
+        Nombre: <input type="text"/>
+        <br/><br/>
+        Apellido: <input type="text"/>
+    </form>
+    
+    <script>
+        const forma = document.getElementById('forma');
+ 
+        forma.addEventListener('focus', (evento)=>{
+            evento.target.style.background = 'yellow';
+        }, true); //True: para que afecte a sus elementos hijos el evento
+        forma.addEventListener('blur', (evento)=>{
+            evento.target.style.background = '';
+        }, true); //True: para que afecte a sus elementos hijos el evento
+
+       
+    </script>
+</body>
+</html>
