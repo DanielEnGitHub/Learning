@@ -1,0 +1,42 @@
+.contenedor,
+.nmb,
+.fecha {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reloj{
+    margin-top: 10%;
+    width: 500px;
+    height: 300px;
+    background-color: black;
+    border-radius: 20px;
+    border: rgb(197, 197, 197) 5px solid; 
+}
+
+.numeros{
+    margin: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgb(179, 177, 157);
+}
+
+.nmb,
+.fecha{
+    font-family: 'Calculator';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nmb{
+    font-size: 100px;
+    
+}
+
+.fecha{
+    font-size: 25px;
+}
