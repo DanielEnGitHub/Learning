@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion React</title>
+</head>
+<body>
+    
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <div id="root"></div>
+
+    <script>
+        // ReactDOM.render(
+        //     React.createElement("h1", null, "Hola mundo desde REACT"),
+        //     document.getElementById('root')
+        // );
+
+        // REACT SIN JSX
+        // ReactDOM.render(
+        //     React.createElement("ol", null, 
+        //         React.createElement("li", null, "Messi"),
+        //         React.createElement("li", null, "Neymar"),
+        //         React.createElement("li", null, "Suarez"),
+        //     ),
+        //     document.getElementById('root')
+        // );
+    </script>
+
+    <script type="text/babel">
+        // REACT CON BABEL JSX
+        ReactDOM.render(
+            <div>
+                <ul>
+                    <li>Messi</li>
+                    <li>Neymar</li>
+                    <li>Ronaldo</li>
+                </ul>
+            </div>,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+</html>
