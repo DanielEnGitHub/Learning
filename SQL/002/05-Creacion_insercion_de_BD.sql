@@ -61,13 +61,14 @@ ALTER TABLE Alumno ADD Telefono VARCHAR(100);
 /* INSERTAR DATOS */
 /*ALUMNOS*/
 INSERT INTO Alumno (Nombre, Apellido, Edad, Genero, Telefono, Direccion)
+VALUES('Selvin', 'Solis', 19, 'Masculino', '864652112', 'Guatemala'),
 VALUES('Mariela', 'Guimenez', 24, 'Femenino', '98655445', 'Guatemala');
 /*MAESTROS*/
 INSERT INTO Maestro (Nombre, Apellido, Correo, Direccion, Edad, Sueldo, FechaIngreso, Telefono)
-VALUES('Juan', 'Viallalvazo', 'villajuan@gmail.com', 'Antigua Guatemala', 35, 4500, '30-07-2016', '986465464'),
-	  ('Margarita', 'Perez', 'marga89646@gmail.com', 'Chimaltenango', 45, 4800, '30-07-2013', '566465464'),
-	  ('Ana', 'Garcia', 'anagarcia46@gmail.com', 'San Lucas', 38, 4000, '01-05-2019', '98646464'),
-	  ('Lorenzo', 'Lanuz', 'lanuz789@gmail.com', 'San Lucas', 32, 4300, '01-01-2019', '5589464')	  
+VALUES('Juan', 'Viallalvazo', 'villajuan@gmail.com', 'Antigua Guatemala', 35, 4500, '12-29-2016', '986465464'),
+	  ('Margarita', 'Perez', 'marga89646@gmail.com', 'Chimaltenango', 45, 4800, '07-30-2013', '566465464'),
+	  ('Ana', 'Garcia', 'anagarcia46@gmail.com', 'San Lucas', 38, 4000, '05-01-2019', '98646464'),
+	  ('Lorenzo', 'Lanuz', 'lanuz789@gmail.com', 'San Lucas', 32, 4300, '01-01-2019', '5589464')  
 ;
 /*PRODUCTOS*/
 INSERT INTO Producto (Nombre, PrecioEspecial, PrecioPublico, Stock)
